@@ -1,6 +1,14 @@
+:root {
+    --dark-bg-color: #24235c;
+    --accent-color: #fae01c;
+    --dark-theme-text-color: #fff;
+    --light-bg-color: #fff;
+    --light-theme-text-color: #292929;
+}
+
 html {
     box-sizing: border-box;
-    min-height: 100%;
+    height: 100%;
 }
 
 *,
@@ -13,4 +21,119 @@ html {
 
 body{
     background-color: #d5c8ff;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.highlight{
+    color: #ded55a;
+}
+
+.btn{
+    background-color: #6b62bd;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+a.btn {
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.card--dark{
+    background-color: #24235c;
+    color: #fff;
+}
+
+.card{
+    border-radius: 48px 48px 36px 36px;
+    margin: 0 auto;
+    max-width: 540px;
+    width: 80%;
+    text-align: center;
+    padding: 60px 65px 70px 65px;
+    position: relative;
+}
+
+.card::after{
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 78px;
+    border-bottom-left-radius: 36px;
+    border-bottom-right-radius: 36px;
+    left: 0;
+    bottom: 0;
+    border-left: 8px solid #fae01c;
+    border-right: 8px solid #fae01c;
+    border-bottom: 30px solid #fae01c;
+    transform: scale(1.02);
+    clip-path: inset(0 0 0 0);
+}
+
+.card__name {
+    font-weight: 400;
+    margin-bottom: 4px;
+}
+
+.card__job-title{
+    color: #aba2e3;
+}
+
+.card__img__container{
+    width: 203px;
+    height: 203px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 27px;
+    position: relative;
+}
+
+.card__img__container::before{
+    content: " ";
+    width: 100%;
+    height: 100%;
+    border-top: 3px solid #fadf1c;
+    border-right: 3px solid #fadf1c;
+    border-left: 3px solid transparent;
+    border-bottom: 3px solid #fadf1c;
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    position: absolute;
+    transform: scale(1.1);
+}
+
+.card__img__container > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.card__info{
+    margin-bottom: 33px;
+}
+
+.card__body{
+    margin-bottom: 42px;
+}
+
+.card__description{
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-bottom: 33px;
+}
+
+.social-icons{
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    color: #a79adf;
 }
