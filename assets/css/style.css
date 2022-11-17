@@ -21,7 +21,10 @@ html {
 
 body{
     background-color: #d5c8ff;
-    min-height: 100%;
+}
+
+main {
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,12 +67,13 @@ a.btn {
     background-color: #24235c;
     color: #fff;
     border-radius: 48px 48px 36px 36px;
-    margin: 0 auto;
     max-width: 540px;
     width: 80%;
     text-align: center;
     padding: 60px 65px 70px 65px;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .card::after{
@@ -85,15 +89,6 @@ a.btn {
     border-right: 8px solid #fae01c;
     border-bottom: 16px solid #fae01c;
     transform: scale(1.02);
-}
-
-.card__name {
-    font-weight: 400;
-    margin-bottom: 4px;
-}
-
-.card__job-title{
-    color: #aba2e3;
 }
 
 .card__img__container{
@@ -128,6 +123,15 @@ a.btn {
     border-radius: 50%;
 }
 
+.card__name {
+    font-weight: 400;
+    margin-bottom: 4px;
+}
+
+.card__job-title{
+    color: #aba2e3;
+}
+
 .card__info{
     margin-bottom: 33px;
 }
@@ -137,7 +141,7 @@ a.btn {
 }
 
 .card__description{
-    font-size: 0.8rem;
+    font-size: 16px;
     font-weight: 400;
     margin-bottom: 33px;
 }
